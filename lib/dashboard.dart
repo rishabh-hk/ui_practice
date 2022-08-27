@@ -10,6 +10,26 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        body: Container(),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.layers_outlined),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.currency_exchange_outlined),
+              label: 'Transaction',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings_outlined),
+              label: 'Settings',
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

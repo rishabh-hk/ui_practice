@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ui_practice/create_password.dart';
+import 'package:ui_practice/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,37 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CreatePassword(),
+                  ),
+                );
+              },
+              child: const Text('Create Password'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Dashboard(),
+                  ),
+                );
+              },
+              child: const Text('Dashboard'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
