@@ -174,6 +174,9 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Expanded(
                     child: ListView.builder(
                         itemCount: (name.length + 1),
@@ -187,57 +190,35 @@ class _HomeState extends State<Home> {
                                 Card(
                                   elevation: 5,
                                   child: SizedBox(
-                                    height: 70,
-                                    child: ListTile(
-                                      leading: Icon(
-                                        icons[index],
-                                      ),
-                                      trailing: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.end,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            quantity[index],
-                                            style: TextStyle(
-                                                color: Color(
-                                                  int.parse('0xff27314C'),
-                                                ),
-                                                fontSize: 15),
-                                          ),
-                                          Text(
-                                            dollar[index],
-                                            style: const TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 12),
-                                          ),
-                                        ],
-                                      ),
-                                      title: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            token[index],
-                                            style: TextStyle(
-                                                color: Color(
-                                                  int.parse('0xff27314C'),
-                                                ),
-                                                fontSize: 15),
-                                          ),
-                                          Text(
-                                            name[index],
-                                            style: const TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 12),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                                      height: 70,
+                                      child: ListTile(
+                                        leading: const Icon(
+                                          Icons.add_circle_outline_rounded,
+                                        ),
+                                        title: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "Add Token",
+                                              style: TextStyle(
+                                                  color: Color(
+                                                    int.parse('0xff27314C'),
+                                                  ),
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            ),
+                                            const Text(
+                                              "Bitcoin, CashCoin, Monero..",
+                                              style: TextStyle(
+                                                  color: Colors.grey,
+                                                  fontSize: 12),
+                                            ),
+                                          ],
+                                        ),
+                                      )),
                                 ),
                                 const SizedBox(
                                   height: 5,
@@ -253,35 +234,47 @@ class _HomeState extends State<Home> {
                               Card(
                                 elevation: 5,
                                 child: SizedBox(
-                                    height: 70,
-                                    child: ListTile(
-                                      leading: const Icon(
-                                        Icons.add_circle_outline_rounded,
-                                      ),
-                                      title: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                            "Add Token",
-                                            style: TextStyle(
-                                                color: Color(
-                                                  int.parse('0xff27314C'),
-                                                ),
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 15),
+                                  height: 70,
+                                  child: ListTile(
+                                    leading: Icon(
+                                      icons[index],
+                                    ),
+                                    trailing: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          quantity[index],
+                                          style: TextStyle(
+                                              color: Color(
+                                                int.parse('0xff27314C'),
+                                              ),
+                                              fontSize: 15),
+                                        ),
+                                        Text(
+                                          dollar[index],
+                                          style: const TextStyle(
+                                              color: Colors.grey, fontSize: 12),
+                                        ),
+                                      ],
+                                    ),
+                                    title: Text(
+                                      token[index],
+                                      style: TextStyle(
+                                          color: Color(
+                                            int.parse('0xff27314C'),
                                           ),
-                                          const Text(
-                                            "Bitcoin, CashCoin, Monero..",
-                                            style: TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 12),
-                                          ),
-                                        ],
-                                      ),
-                                    )),
+                                          fontSize: 15),
+                                    ),
+                                    subtitle: Text(
+                                      name[index],
+                                      style: const TextStyle(
+                                          color: Colors.grey, fontSize: 12),
+                                    ),
+                                  ),
+                                ),
                               ),
                               const SizedBox(
                                 height: 5,
